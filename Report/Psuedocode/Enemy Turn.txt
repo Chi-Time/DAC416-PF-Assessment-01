@@ -1,3 +1,5 @@
+Enemy Turn
+
 - IF: User has healed
    - Pick random choice between Attack, Special Attack or Recharge
    - IF: Attack

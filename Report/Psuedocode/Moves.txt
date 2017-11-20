@@ -1,6 +1,6 @@
 Moves
 
-Attack ()
+Attack (opponent)
 
 - IF: opponent has dodged
    - Decrease hit chance by 30%
@@ -14,16 +14,16 @@ Attack ()
    - Get next hit chance
    - Hit Opponent
 
-Hit Opponent ()
+Hit Opponent (opponent, hasHit)
 
-- IF: Hit has occurred
+- IF: hasHit has occurred
    - Generate random damage between 1 - 10
    - Apply damange to opponent
    - Display hit to screen as well as damage given 
-- ELSE: Hit has missed
+- ELSE: hasHit has missed
    - Display miss to screen
 
-Special Attack ()
+Special Attack (opponent)
 
 - IF: opponent has dodged
       - Decrease hit chance by 30%
@@ -37,26 +37,26 @@ Special Attack ()
       - Get next hit chance
       - Hit Opponent
 
-Hit Opponent Special ()
+Hit Opponent Special (opponent, hasHit)
 
-- IF: Hit has occurred
+- IF: hasHithas occurred
    - Generate random damage between 5 - 20
    - Apply damange to opponent
    - Display hit to screen as well as damage given
-- ELSE: Hit has missed
+- ELSE: hasHithas missed
    - Display miss to screen
 
-Recharge ()
+Recharge (user)
 
 - multiply recharge rate by 4 for this turn
 - Change current user state to recharging
 
-Dodge ()
+Dodge (user)
 
 - Decrease energy recharge rate by half for this turn
 - Change current user state to dodging
 
-Heal ()
+Heal (user)
 
 - IF: current energy is above half
    - Add half energy to health amount

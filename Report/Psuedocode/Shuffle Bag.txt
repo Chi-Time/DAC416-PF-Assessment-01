@@ -7,7 +7,7 @@ Construction ()
 
 - Set current bag position to 0
 
-Add Object to Bag ()
+Add Object to Bag (value, amount)
 
 - Get the value of the object to add to the bag
 - Get the number of times it should be added to the bag
@@ -18,7 +18,7 @@ Add Object to Bag ()
 - LOOP END
 - Set the current position of the bag to the end of the list
 
-Removing Object from Bag ()
+Removing Object from Bag (value, amount)
 
 - Get the value of the object to remove from the bag
 - Get the number of times the object should be removed from the bag
@@ -28,7 +28,7 @@ Removing Object from Bag ()
    - Delete it from the bag and decrease the size.
 - LOOP END
 
-Get An Object From the Bag ()
+value Get An Object From the Bag ()
 
 - Set an empty temp value
 - IF: current bag position is less than 1

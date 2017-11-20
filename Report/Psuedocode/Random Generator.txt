@@ -6,7 +6,7 @@ Construction
 
 - Seed random number generator
 
-Get Number In Range ()
+number GetNumberInRange (min, max)
 
 - Get a minimum bound to pick from (inclusive)
 - Get a maximum bound to pick from (inclusive)
