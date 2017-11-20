@@ -1,0 +1,68 @@
+Moves
+
+Attack ()
+
+- IF: opponent has dodged
+   - Decrease hit chance by 30%
+   - Get next hit chance
+   - Hit Opponent ()
+- IF: opponent has recharge
+   - Increase hit chance by 10%
+   - Get next hit chance
+   - Hit Opponent
+- ELSE
+   - Get next hit chance
+   - Hit Opponent
+
+Hit Opponent ()
+
+- IF: Hit has occurred
+   - Generate random damage between 1 - 10
+   - Apply damange to opponent
+   - Display hit to screen as well as damage given 
+- ELSE: Hit has missed
+   - Display miss to screen
+
+Special Attack ()
+
+- IF: opponent has dodged
+      - Decrease hit chance by 30%
+      - Get next hit chance
+      - Hit Opponent ()
+- IF: opponent has recharge
+      - Increase hit chance by 10%
+      - Get next hit chance
+      - Hit Opponent
+- ELSE
+      - Get next hit chance
+      - Hit Opponent
+
+Hit Opponent Special ()
+
+- IF: Hit has occurred
+   - Generate random damage between 5 - 20
+   - Apply damange to opponent
+   - Display hit to screen as well as damage given
+- ELSE: Hit has missed
+   - Display miss to screen
+
+Recharge ()
+
+- multiply recharge rate by 4 for this turn
+- Change current user state to recharging
+
+Dodge ()
+
+- Decrease energy recharge rate by half for this turn
+- Change current user state to dodging
+
+Heal ()
+
+- IF: current energy is above half
+   - Add half energy to health amount
+   - Take half energy from energy total
+- IF: current energy is lower than half
+   - Add the rest of the energy to the health amount
+   - Set energy to 0 
+- IF: health is above max health
+      - Cap health at max
