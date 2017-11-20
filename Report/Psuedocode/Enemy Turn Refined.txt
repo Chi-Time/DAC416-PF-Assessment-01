@@ -1,0 +1,74 @@
+GetTurn ()
+
+- IF: User has healed
+   - HealTree ()
+- ELSE IF: User has recharged
+   - RechargeTree ()
+- ELSE IF: User has Dodged
+   - DodgeTree ()
+- ELSE
+   - AttackTree ()
+- RechargePassively ()
+- End players turn. (This resets any hitchance or state changes they made before this turn.)
+
+HealTree ()
+
+- Pick random choice between Attack, Special Attack or Recharge
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+   - IF: Recharge
+      - See Moves Recharge ()
+
+RechargeTree ()
+
+- Pick random choice between Attack, Special Attack or Heal
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+   - IF: Heal
+      - IF: Has not alread healed
+         - See Moves Heal ()
+      - ELSE: Has already healed
+         - Re-prompt choice
+
+DodgeTree ()
+
+- Pick random choice between Attack, Heal or Recharge
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Heal
+      - IF: Has not alread healed
+         - See Moves Heal ()
+      - ELSE: Has already healed
+         - Re-prompt choice
+   - IF: Recharge
+      - See Moves Recharge ()
+
+AttackTree ()
+
+- Pick random choice between Dodge, Attack, or Special Attack
+   - IF: Dodge
+      - See Moves Dodge ()
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+
+RechargePassively ()
+
+- Increase energy by adding energy recharge rate
+- IF: energy is above max energy
+   - Cap energy at max energy
+
