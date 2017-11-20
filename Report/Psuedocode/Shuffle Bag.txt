@@ -1,0 +1,42 @@
+Shuffle Bag Implementation
+
+- Create current bag position member
+- Create member list of bag objects
+
+Construction ()
+
+- Set current bag position to 0
+
+Add Object to Bag ()
+
+- Get the value of the object to add to the bag
+- Get the number of times it should be added to the bag
+- Loop for the number of times the object should be added
+- LOOP START
+   - Put a copy of the value into the bag list each time
+   - Increase the bag's size
+- LOOP END
+- Set the current position of the bag to the end of the list
+
+Removing Object from Bag ()
+
+- Get the value of the object to remove from the bag
+- Get the number of times the object should be removed from the bag
+- Loop for the number of times the object should be removed
+- LOOP START
+   - Find an element in the bag that is the same as value
+   - Delete it from the bag and decrease the size.
+- LOOP END
+
+Get An Object From the Bag ()
+
+- Set an empty temp value
+- IF: current bag position is less than 1
+   - Set the current bag position back to the end of the bag's list.
+   - Return the value located at the first index of the bag
+- Get a random index from the first index of the bag to the current position
+- Storethe the value located at the random index in the temp value
+- Swap the random positions value with the current positions value (This shuffles the bag and allows the current position to be picked again if it was never picked.)
+- Set the current position's value to that of the value we just stored. (Thus putting it at the end and no longer being able to be picked.)
+- Set the current position in the bag to be one less. (This stops previous choices being picked.)
+- Return the stored temporary value to the caller.
