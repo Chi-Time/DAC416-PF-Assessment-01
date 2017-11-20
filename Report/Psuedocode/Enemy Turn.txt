@@ -47,4 +47,7 @@ Enemy Turn
          - See Moves Special Attack ()
       - ELSE: Does not have enough energy
          - Re-prompt choice
+- Naturally recharge energy;
+- IF: energy is above max energy
+   - Cap energy at max energy
 - End players turn. (This resets any hitchance or state changes they made before this turn.)
