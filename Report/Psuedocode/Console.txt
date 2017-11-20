@@ -1,0 +1,86 @@
+Console
+
+- Create member to hold current color choice
+- Create member to hold number of chars written to screen
+- create member to hold a handle to the window
+- Create member to hold position of screen cursors
+- Create member to hold info on the window
+
+Construction
+
+- Set console window title to "RPG Game"
+- Set color member to white
+- Set number of chars written to 0
+- Get and store a handle to the window
+- Get and store the window information
+- Hide the console cursor on the screen
+- Set the cursot position to the top left of the screen
+
+ClearScreen ()
+
+- Set the position of the first cell to clear from
+- Set the current size of the console window
+- Overwrite the screen with spaces to empty the screen
+- Reset the attributes of the console cells
+- Reset the cursor position back to it's original position before clearing
+- Reset the number of chars written to the screen
+
+SetCursorPosition (position)
+
+- Set the member cursors position to the new position (this way the position is stored for any future draw's)
+- Set the console cursor's position to the member cursor's position
+
+Draw (message)
+
+- Set the console text color to the currently saved color
+- Write the message to the screen at the current cursor position
+
+Draw (message, color)
+
+- Set the console text color the to color given
+- Write the message to the screen at the current cursor position
+
+Draw (position, message)
+
+- Set the console cursor position to the position given
+- Set the console text color to the currently saved color
+- Write the message to the screen at the current cursor position
+
+Draw (position, message, color)
+
+- Set the console cursor position to the position given
+- Set the console text color the to color given
+- Write the message to the screen at the current cursor position
+
+WriteLine (message)
+
+- Draw (message)
+- EndLine ()
+
+WriteLine (message, color)
+
+- Draw (message, color)
+- EndLine ()
+
+WriteLine (position, message)
+
+- Draw (position, message)
+- EndLine ()
+
+WriteLine (position, message, color)
+
+- Draw (position, message, color)
+- EndLine ()
+
+EndLine ()
+
+- Create a newline
+- Write the newline to the screen
+
+WaitForInput ()
+
+- EndLine ()
+- Create a message to ask the user to press any key
+- Draw (message)
+- Wait for any input
+- EndLine ()
