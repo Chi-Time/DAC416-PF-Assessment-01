@@ -1,0 +1,32 @@
+Perform Round ()
+
+- Display Game Info ()
+
+- Perform User Move ()
+- IF: Enemy is dead
+   - End Round
+
+- Display Game Info ()
+
+- Perform Enemy Move ()
+- IF: Player is dead
+   - End Round
+
+- Display Game Info ()
+
+- Perform Round ()
+
+Display Game Info ()
+
+- Display Enemy Stats ()
+   - See display stats ()
+- Display Player Stats ()
+   - See display Stats ()
+
+Perform User Move ()
+
+- See User Turn
+
+Perform Enemy Move ()
+
+- See Enemy Turn ()

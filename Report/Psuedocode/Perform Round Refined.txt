@@ -1,0 +1,15 @@
+Perform Round ()
+
+- Perform User Move ()
+- IF: Enemy is dead
+   - End Round
+- Perform Enemy Move ()
+- IF: Player is dead
+   - End Round
+- Perform Round ()
+
+Perform User Move ()
+
+See User Turn
+
+Perform Enemy Move ()
