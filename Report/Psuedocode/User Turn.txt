@@ -2,6 +2,10 @@ User Turn
 
 Perform User Move ()
 
+- Recharge energy;
+- IF: energy is above max energy
+   - Cap energy at max energy
+
 - Prompt user for move choice
 
 - IF User has already healed
@@ -28,5 +32,7 @@ Perform User Move ()
       - See Moves Heal ()
    - ELSE: User has already healed
       - Re-prompt move choice
-
+- Naturally recharge energy;
+- IF: energy is above max energy
+   - Cap energy at max energy
 - End enemies turn. (This resets any hitchance or state changes they made before this turn.)
