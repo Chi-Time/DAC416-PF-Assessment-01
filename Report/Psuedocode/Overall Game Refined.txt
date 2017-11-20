@@ -1,0 +1,36 @@
+Game Overview
+
+Menu State
+
+- Display Menu State
+- IF: Start Game
+   - Start Game State ()
+
+Game State ()
+
+- Display Intro to Game State
+- Setup Game State
+- Perform Round ()
+- IF: Round Is Over AND Player is Alive
+   - Prompt for Next Round
+   - IF: Player chooses next round
+      - Perform Round ()
+   - ELSE: Player chooses to quit
+      - End Game ()
+- ELSE: Rounds Is Over AND Player Dies
+   - End Game ()
+
+Perform Round ()
+
+- Perform User Move
+- IF: Enemy is dead
+   - End Round
+- Perform Enemy Move
+- IF: Player is dead
+   - End Round
+- GOTO: User move again. 
+
+End Game State ()
+
+- Display Final Game Stats
+- Exit Game After Keypress
