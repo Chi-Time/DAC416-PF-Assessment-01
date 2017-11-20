@@ -1,0 +1,32 @@
+User Turn
+
+Perform User Move ()
+
+- Prompt user for move choice
+
+- IF User has already healed
+   - Display heal choice as grey
+- IF: User does not have max energy
+   - Display special attack choice as grey
+
+- IF: User selects invalid move
+   - Re-prompt move choice
+
+- IF: User selects Attack
+   - See Moves Attack ()
+- IF: User selects Special Attack
+   - IF: User has enough energy
+      - See Moves Special Attack ()
+   - ELSE: User does not have enough energy
+      - Re-prompt move choice
+- IF: User selects Recharge
+   - See Moves Recharge ()
+- IF: User selects Dodge
+   - See Moves Dodge
+- IF: User selects Heal
+   - IF: User has not already healed
+      - See Moves Heal ()
+   - ELSE: User has already healed
+      - Re-prompt move choice
+
+- End enemies turn. (This resets any hitchance or state changes they made before this turn.)

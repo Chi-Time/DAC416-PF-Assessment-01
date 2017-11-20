@@ -1,0 +1,48 @@
+- IF: User has healed
+   - Pick random choice between Attack, Special Attack or Recharge
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+   - IF: Recharge
+      - See Moves Recharge ()
+- IF: User has recharged
+   - Pick random choice between Attack, Special Attack or Heal
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+   - IF: Heal
+      - IF: Has not alread healed
+         - See Moves Heal ()
+      - ELSE: Has already healed
+         - Re-prompt choice
+- IF: User has dodged
+   - Pick random choice between Attack, Heal or Recharge
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Heal
+      - IF: Has not alread healed
+         - See Moves Heal ()
+      - ELSE: Has already healed
+         - Re-prompt choice
+   - IF: Recharge
+      - See Moves Recharge ()
+- ELSE: User has attacked
+   - Pick random choice between Dodge, Attack, or Special Attack
+   - IF: Dodge
+      - See Moves Dodge ()
+   - IF: Attack
+      - See Moves Attack ()
+   - IF: Special Attack
+      - IF: Has enough energy
+         - See Moves Special Attack ()
+      - ELSE: Does not have enough energy
+         - Re-prompt choice
+- End players turn. (This resets any hitchance or state changes they made before this turn.)

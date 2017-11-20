@@ -10,35 +10,6 @@ Perform Round ()
 
 Perform User Move ()
 
-- Prompt user for move choice
-- IF: User selects invalid move
-   - Re-prompt move choice
-- IF: User selects Attack
-   - Attack Enemy ()
-- IF: User selects Special Attack
-   - IF: User has enough energy
-      - Special attack enemy
-   - ELSE: User does not have enough energy
-      - Re-prompt move choice
-- IF: User selects Recharge
-   - Increase recharge rate for this turn
-- IF: User selects Dodge
-   - Decrease enemy hit chance for this turn
-   - Decrease energy recharge rate by half for this turn
-- IF: User selects Heal
-   - IF: User has not already healed
-      - User heals
-      - Re-prompt move choice
-   - ELSE: User has already healed
-      - Re-prompt move choice
+See User Turn
 
 Perform Enemy Move ()
-
-- IF: User has healed
-   - Pick random choice between Attack, Special Attack or Recharge
-- IF: User has recharged
-   - Pick random choice between Attack, Special Attack or Heal
-- IF: User has dodged
-   - Pick random choice between Attack, Heal or Recharge
-- ELSE: User has attacked
-   - Pick random choice between Dodge, Attack, or Special Attack
