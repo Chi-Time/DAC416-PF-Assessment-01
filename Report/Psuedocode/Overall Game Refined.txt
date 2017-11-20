@@ -1,36 +1,64 @@
 Game Overview
 
-Menu State
+----Menu State----
 
 - Display Menu State
-- IF: Start Game
+- Ask user to select from menu choices
+- IF: User selects start game choice
    - Start Game State ()
+- IF: User selects display game rules choice
+   - Display game rules
+   - Wait for keypress
+   - Re-display menu state ()
+- IF: User selects display credits screen choice
+   - Display credits screen
+   - Wait for keypress
+   - Re-display menu state ()
+- IF: User selects exit game choice
+   - Clear display
+   - Wait for keypress
+   - Exit game ()
 
-Game State ()
+----Game State-----
 
-- Display Intro to Game State
-- Setup Game State
+- Create Player
+- Start Round ()
+
+
+Start Round ()
+
+- Create an enemy opponent
 - Perform Round ()
-- IF: Round Is Over AND Player is Alive
-   - Prompt for Next Round
-   - IF: Player chooses next round
-      - Perform Round ()
-   - ELSE: Player chooses to quit
-      - End Game ()
-- ELSE: Rounds Is Over AND Player Dies
-   - End Game ()
 
 Perform Round ()
 
 - Perform User Move
 - IF: Enemy is dead
-   - End Round
+   - End Round ()
 - Perform Enemy Move
 - IF: Player is dead
-   - End Round
-- GOTO: User move again. 
+   - End Round ()
+- Perform Round ()
 
-End Game State ()
+End Round ()
 
-- Display Final Game Stats
-- Exit Game After Keypress
+- IF: Round Ends AND Player Lives
+   IF: Player has enemies left
+      - Prompt user to play another round
+      - IF: User chooses to player another
+         - Start Round ()
+      - ELSE: User chooses to not player another round
+         - End Game ()
+   ELSE: Player has no enemies left
+      - End Game ()
+- ELSE: Round Ends AND Player Dies
+   - End Game ()
+
+----End Game State----
+
+- IF: User beat all enemies
+   - Display final user stats and congratulation message
+- ELSE: User didn't beat all enemies
+   - Display final user stats and losing message
+- Wait for keypress
+- Exit Game ()
