@@ -1,0 +1,17 @@
+Random Generator
+
+- Create a random number generator
+
+Construction
+
+- Seed random number generator
+
+Get Number In Range ()
+
+- Get a minimum bound to pick from (inclusive)
+- Get a maximum bound to pick from (inclusive)
+- Get a number in this range in a uniform distribution
+- Return this number to the caller
+
+
+Make a global instance of this generator as only one should exist for the program.
